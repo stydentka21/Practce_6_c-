@@ -1,0 +1,28 @@
+задача 1
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+#include <string>
+using namespace std;
+
+int main() {
+	for (int count = 1; count <= pow(2, 8); count = count + 16) {
+
+		cout << " | " << setw(3) << count << "| ";
+		for (int count_2 = count; count_2 < count + 16; count_2++) {
+			char c = count_2;
+			cout << setw(2) << c << " | ";
+		}
+		cout << endl;
+	}
+	cout << endl;
+	for (int count = 1; count <= pow(2, 9); count = count + 16) {
+		cout << " | " << setw(4) << count << "| ";
+		for (int count_2 = count; count_2 < count + 16; count_2++) {
+			wchar_t c = count_2;
+			wcout << setw(2) << c << " | ";
+		}
+		cout << endl;
+	}
+	return 0;
+}
